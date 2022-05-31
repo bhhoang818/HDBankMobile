@@ -1,0 +1,35 @@
+.title
+	padding: r(32px) 0 !important
+	text-align: center !important
+	float: none !important
+	border-radius: 0 !important
+	background: none !important
+	height: unset !important
+	&_big
+		font-size: r(40px) !important
+		color: #000 !important
+		font-weight: 700 !important
+		line-height: 58px !important
+	&_small
+		font-size: r(32px) !important
+		font-weight: 800 !important
+		line-height: 120% !important
+		&-white
+			color: $white !important
+		&-black
+			color: #000 !important
+		&-bg
+			background: #FFF9E2 !important
+	@media screen and ( max-width: 1366px )
+		padding: r(16px) 0 !important
+		&_big
+			font-size: r(30px) !important
+		&_small
+			font-size: r(24px) !important
+	@media screen and ( max-width: 992px )
+		padding: r(8px) 0 !important
+		&_big
+			font-size: 20px !important
+			line-height: normal !important
+		&_small
+			font-size: r(22px) !important

@@ -1,0 +1,17 @@
+section.hero-section.home-6.reveal
+	.container 
+		h2.title.title_big.title_big-black Bản tin HDBank
+		.swiper.newsSwiper
+			.swiper-wrapper
+				-for(i=1; i<6; i++)
+					.swiper-slide
+						.slide-inner
+							a.slide-inner__img(href="") 
+								img(src="./images/news-"+i+".jpg", alt="")
+							.slide-inner__content
+								a(href="") Cùng Ngành Ngân hàng, HDBank chung tay hướng về phát triển nông nghiệp, nông thôn bền vững 
+								.date-time.mt-3 
+									p 14/12/2021 15:32
+			.swiper-pagination
+			a.view-all(href="") 
+				p Xem tất cả

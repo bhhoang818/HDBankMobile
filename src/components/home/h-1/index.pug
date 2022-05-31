@@ -1,0 +1,23 @@
+section.hero-section.home-1
+	.container 
+		h1.title.title_big  Các sản phẩm tại HDBank
+		ul.d-flex.align-center.justify-content-center
+			li.active
+				a(href="") 
+					|Cá nhân
+			li
+				a(href="#sec-4") 
+					|Doanh nghiệp
+		.production
+			.swiper
+				.swiper-wrapper
+					-for(i=1; i<8; i++)
+						.swiper-slide
+							a.slide-inner(href="")
+								.slide-inner__img
+									img(src="./images/icons/pro-"+i+".svg", alt="")
+								.slide-inner__content
+									p Sản phẩm tiền gửi
+			.swiper-button-next.swiper-button-next__small
+			.swiper-button-prev.swiper-button-prev__small
+		

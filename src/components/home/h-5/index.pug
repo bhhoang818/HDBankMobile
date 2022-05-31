@@ -1,0 +1,22 @@
+section.hero-section.home-5.reveal
+	.swiper.bigImage.mb-3
+		.swiper-wrapper
+			-for(i=1; i<3; i++)
+				.swiper-slide
+					.slide-inner
+						a.slide-inner__img(href="")
+							img(src="./images/deal-"+i+".jpg", alt="") 
+		.swiper-pagination
+	.container
+		h2.title.title_small.title_small-black.mb-2 Ưu đãi cho bạn
+		.swiper.myPromotion
+			.swiper-wrapper
+				-for(i=3; i<19; i++)
+					.swiper-slide
+						.slide-inner
+							a.slide-inner__img(href="")
+								img(src="./images/deal-"+i+".jpg", alt="") 
+							.slide-inner__content 
+								a(href="") ƯU ĐÃI CHÀO HÈ TỪ VISA VIỆT NAM
+
+			a.view-all(href="") Xem tất cả

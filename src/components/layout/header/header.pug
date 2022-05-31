@@ -1,0 +1,193 @@
+.mobile-popup
+    i.material-icons close
+    img.mobile-popup__logo(alt='HDBank' src='./images/icons/logo-popup.svg')
+    .mobile-popup__content
+        .mobile-popup__content__detail.d-flex
+            .mobile-popup__content__detail__text
+                h5.mobile-popup__content__detail__text__title HDBank Mobile Banking
+                p Giao dịch ngân hàng mọi lúc mọi nơi.
+                    br
+                    |Miễn phí tại CH Play
+            a.mobile-popup__content__detail__download(href="") Xem
+
+header 
+    nav.navbar-mobile
+        .container.d-flex.align-items-center.justify-content-between
+            .navbar-header.d-flex.align-items-center
+                button#butonToggle.btn.btn-hamburger-lines(type='button')
+                    span
+                    span
+                    span
+                    span
+                a.navbar-brand(href='/') 
+                    img(src="./images/logo.svg", alt="")
+            .navbar-collapse
+                ul.navbar-right.d-flex.align-items-center
+                    li.nav-item
+                        a.btn-register(href='/register') Đăng ký
+                    li.nav-item
+                        a.btn-login.active(href='/login') Đăng nhập
+                    li.nav-item.dropdown
+                        a.dropdown-toggle(href='#')
+                            img(src="./images/icons/vn.svg", alt="")
+                        ul.dropdown-menu.hide
+                            li
+                                a(href="") 
+                                    span English
+                                    img(src="./images/icons/en.svg", alt="")
+                            li
+                                a(href="") 
+                                    span 日本 
+                                    img(src="./images/icons/jp.svg", alt="")
+                    li.nav-item 
+                        a.bell-ring(href='')
+                            img(src='./images/icons/ring-bell.svg' alt='')
+    #sidebar-menu
+        .headding
+            form.wrap-form(action="", method="post") 
+                .form-group
+                    input.form-control(type="text", name="inputSearch" placeholder="Tìm kiếm")
+                    button(type="submit") 
+                        img(src="./images/icons/search.svg", alt="")
+            a(href="").btn.btn-login
+                span Đăng ký
+        .srcoll-bar
+            .side-navigation-wrap
+                ul.side-navigation
+                    li.active
+                        .accordion-title
+                            a(href='') Khách hàng cá nhân 
+                            em
+                        ul.nav-sub.show
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-1.svg", alt="")
+                                    |Ngân hàng điện tử
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-2.svg", alt="")
+                                    |Sản phẩm vay
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-3.svg", alt="")
+                                    |Thẻ
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-4.svg", alt="")
+                                    |Sản phẩm tiền gửi
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-5.svg", alt="")
+                                    |Sản phẩm dịch vụ
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-6.svg", alt="")
+                                    |Bảo hiểm
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/i-7.svg", alt="")
+                                    |Ưu đãi
+                    li
+                        .accordion-title
+                            a(href='') Khách hàng doanh nghiệp
+                            em
+                        ul.nav-sub
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/cooperate-1.svg", alt="")
+                                    |Ngoại tệ & Phát sinh
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/cooperate-2.svg", alt="")
+                                    |Tài trợ thương mại
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/cooperate-3.svg", alt="")
+                                    |Tín dụng
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/cooperate-4.svg", alt="")
+                                    |Ngân hàng đại lý
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/cooperate-5.svg", alt="")
+                                    |Quản lý dòng tiền
+                            li
+                                a(href="") 
+                                    .icon 
+                                        img(src="./images/icons/cooperate-6.svg", alt="")
+                                    |ƯU đãi
+                    li
+                        .accordion-title
+                            a(href='') Khách hàng ưu tiên 
+                            em
+                    li
+                        .accordion-title
+                            a(href='') Nhà đầu tư
+                            em
+                    li
+                        .accordion-title
+                            a(href='') Cơ hội nghề nghiệp
+                    li
+                        .accordion-title
+                            a(href='') Mạng lưỡi chi nhanh/ATM
+                    li
+                        .accordion-title
+                            a(href='') Công cụ tiện ích
+                    li
+                        .accordion-title
+                            a(href='') Câu hỏi thường gặp - FAQ
+                    li
+                        .accordion-title
+                            a(href='') Rút gọn link
+                    li
+                        ul.suport
+                            li 
+                                a(href="tel") 
+                                    img(src="./images/icons/phone.svg", alt="")
+                                    |19006060
+                            li 
+                                a(href="") 
+                                    img(src="./images/icons/chat.svg", alt="")
+                                    |Chat hỗ trợ trực tuyến
+                            li 
+                                a(href="") 
+                                    img(src="./images/icons/email.svg", alt="")
+                                    |Gửi email
+                .download-app
+                    p Tải app HDBank
+                    .icon.d-flex.align-center
+                        a(href="") 
+                            img(src="./images/GooglePlay.png", alt="")
+                        a(href="") 
+                            img(src="./images/appstore.png", alt="")
+                .socail-list 
+                    p Kết nối với HDBank
+                    ul.d-flex.align-items-center
+                        li
+                            a(href="") 
+                                img(src="./images/icons/facebook.svg", alt="")
+                        li
+                            a(href="") 
+                                img(src="./images/icons/zalo.svg", alt="")
+                        li
+                            a(href="") 
+                                img(src="./images/icons/tiktok.svg", alt="")
+                        li
+                            a(href="") 
+                                img(src="./images/icons/youtube.svg", alt="")
+                        
+                    p.copy-right Bản quyền @ 2021 thuộc về HDBank  
+                    

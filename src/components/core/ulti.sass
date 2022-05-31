@@ -1,0 +1,131 @@
+#overlay
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 150
+    transition: .3s all ease-in-out
+    &.active
+        opacity: 1
+        visibility: visible
+        pointer-events: visible
+main
+    @media screen and ( max-width: 768.98px )
+        padding-top: 70px
+        .hero-section
+            padding: 12px 0
+.swiper-button-next,
+.swiper-button-prev
+    &__small
+        width: 24px !important
+        height: 24px !important
+        opacity: 0.4
+        border: 1px solid #000000
+        border-radius: 50%
+        &::after
+            display: none
+        &::before
+            display: flex
+            align-items: center
+            justify-content: center
+    &__big
+        width: 40px !important
+        height: 40px !important
+        border: 1px solid #FFFFFF
+        border-radius: 50%
+        &::after
+            display: none
+        &::before
+            display: flex
+            align-items: center
+            justify-content: center
+            color: #fff
+            font-size: 20px
+.swiper-button-next
+    &__small
+        right: -30px !important
+        &::before
+            content: url('../images/icons/Arrow-right.svg')
+    &__big
+        &::before
+            content: '\e5c8'
+            font-family: Material Icons
+.swiper-button-prev
+    &__small
+        left: -30px !important
+        &::before
+            content: url('../images/icons/Arrow-Left.svg')
+    &__big
+        &::before
+            content: '\e5c4'
+            font-family: Material Icons
+.btn-small
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 6.56842px 19.7053px
+    gap: 6.57px
+    width: 105px
+    height: 23px
+    background: #FFD643
+    border-radius: 50px
+    font-size: 10px
+    font-weight: 700
+    color: #333333
+.lcl
+    overflow: hidden
+    display: -webkit-box
+    text-overflow: ellipsis
+    -webkit-box-orient: vertical
+
+    &-1
+        -webkit-line-clamp: 1
+
+    &-2
+        -webkit-line-clamp: 2
+
+    &-3
+        -webkit-line-clamp: 3
+
+    &-4
+        -webkit-line-clamp: 4
+
+    &-5
+        -webkit-line-clamp: 5
+.view-all
+    display: block
+    color: #fff
+    text-decoration: underline
+    text-align: center
+.production
+    margin: 0 auto
+    width: 67vw
+    position: relative
+    .swiper-slide
+        .slide-inner
+            &__img
+                width: 64px
+                height: 64px
+                margin: 0 auto
+                img
+                    width: 100%
+                    height: 100%
+
+            &__content
+                font-size: 12px
+                text-align: center
+                color: #000000
+.home-1,
+.home-2,
+.home-3,
+.home-4,
+.home-5,
+.home-6,
+.home-7
+    @media screen and ( min-width: 601px )
+        display: none

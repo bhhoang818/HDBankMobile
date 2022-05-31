@@ -1,0 +1,245 @@
+.mobile-popup
+	display: none
+	flex-direction: row
+	align-items: center
+	padding: 8px 24px 8px 8px
+	width: 100%
+	gap: 10px
+	background: radial-gradient(98.93% 327.66% at 3.33% -11.36%, #FFD149 0%, #E12129 63.68%, #CB1728 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #F8F8F8
+	backdrop-filter: blur(62px)
+	i
+		color: #fff
+		cursor: pointer
+	&__logo
+		width: 40px
+		height: 40px
+		border-radius: 8px
+	&__content
+		width: 100%
+		&__detail
+			align-items: center
+			&__text
+				font-weight: 500
+				font-size: 10px
+				color: #FFFFFF
+				&__title
+					font-weight: 700
+					font-size: 12px
+					color: #fff
+			&__download
+				margin-left: auto
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 0px 24px
+				width: max-content
+				height: 32px
+				background: #FFFFFF
+				border-radius: 50px
+				font-weight: 700
+				font-size: 12px
+				color: #333333
+@media screen and ( max-width: 600.98px )
+	header
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		background: #fff
+		z-index: 1000
+		.navbar-mobile
+			padding: 1rem 0
+			.navbar-header
+				.navbar-brand
+					width: 105px
+					margin-left: 10px
+			.navbar-collapse
+				.navbar-right
+					gap: 10px
+					.nav-item
+						.btn-login,
+						.btn-register
+							display: flex
+							justify-content: center
+							align-items: center
+							padding: 8px
+							width: max-content
+							height: 24px
+							border-radius: 50px
+							font-weight: 700
+							font-size: 12px
+							line-height: 18px
+							text-align: center
+							color: #333333
+							background: #DDE1EB
+							&.active
+								background: #FFD643
+						.bell-ring
+							position: relative
+							width: 17px
+							height: 20px
+							display: none
+							&::after
+								position: absolute
+								top: -6px
+								right: -6px
+								content: '\e061'
+								font-family: Material Icons
+								font-size: 16px
+								color: #F00020
+							&.active
+								display: block
+						&.dropdown
+							.dropdown-menu
+								position: absolute
+								right: 8px
+								top: 100%
+								padding: 12px 16px 12px 12px
+								gap: 12px
+								width: 129px
+								height: auto
+								background: #FFFFFF
+								box-shadow: 0px 14px 40px rgba(33, 43, 54, 0.1)
+								border-radius: 20px
+								overflow: hidden
+								transition: all 0.4s ease-in-out
+								li
+									width: 100%
+									a
+										display: flex
+										align-items: center
+										justify-content: space-between
+										span
+											font-weight: 500
+											font-size: 14px
+											color: #333333
+										img
+											width: 24px
+											height: 24px
+											margin-left: auto
+								li + li
+									margin-top: 16px
+								&.hide
+									height: 0
+									padding: 0
+		#sidebar-menu
+			position: absolute
+			top: 100%
+			left: -100%
+			width: 90vw
+			gap: 20px
+			background: #FFFFFF
+			transition: all ease-in-out .3s
+			.headding
+				padding: 16px 24px 0
+			.wrap-form
+				width: 100%
+				margin-bottom: 20px
+				.form-group
+					position: relative
+					.form-control
+						padding: 4px 12px 4px 16px
+						gap: 8px
+						width: 263px
+						height: 40px
+						background: #F9FAFC
+						border-radius: 42px
+						border: 0
+						font-weight: 500
+						font-size: 14px
+						color: #333333
+						&::placeholder
+							font-weight: 500
+							font-size: 14px
+							color: #333333
+					button
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 16px
+			.btn-login
+				margin-bottom: 20px
+			.srcoll-bar
+				gap: 20px
+				padding: 0 24px 16px
+				.side-navigation-wrap
+					max-height: 70vh
+					overflow-y: auto
+					.side-navigation
+						gap: 32px
+						display: flex
+						flex-direction: column
+						li
+							.accordion-title
+								display: flex
+								align-items: center
+								justify-content: space-between
+								a
+									font-weight: 700
+									font-size: 18px
+									color: #000000
+							.nav-sub
+								gap: 32px
+								display: flex
+								flex-direction: column
+								margin-top: 16px
+								li
+									a
+										display: flex
+										align-items: center
+										gap: 8px
+										font-weight: 400
+										font-size: 18px
+										color: #000000
+										.icon
+											width: 24px
+											height: 24px
+											display: flex
+											align-items: center
+											img
+												width: 100%
+												height: 100%
+							.suport
+								display: flex
+								flex-direction: column
+								gap: 16px
+								li
+									a
+										display: flex
+										align-items: center
+										gap: 8px
+										font-size: 16px
+										color: #333333
+				.download-app
+					margin: 32px 0
+					display: flex
+					flex-direction: column
+					gap: 16px
+					p
+						font-weight: 700
+						font-size: 16px
+						color: #333333
+					.icon
+						a
+							display: flex
+							width: 50%
+							padding: 0 8px
+							img
+								width: 100%
+				.socail-list
+					p
+						font-weight: 700
+						font-size: 16px
+						color: #333333
+					ul
+						padding: 16px 0
+						display: flex
+						gap: 16px
+						align-items: center
+					.copy-right
+						font-size: 12px
+						text-align: center
+						color: #333333
+						font-weight: 400
+			&.is-active
+				left: 0
