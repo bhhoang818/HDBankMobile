@@ -166,11 +166,12 @@
 					max-height: 70vh
 					overflow-y: auto
 					.side-navigation
-						gap: 32px
+						gap: 16px
 						display: flex
 						flex-direction: column
 						li
 							.accordion-title
+								padding-right: 16px
 								display: flex
 								align-items: center
 								justify-content: space-between
@@ -178,11 +179,22 @@
 									font-weight: 700
 									font-size: 18px
 									color: #000000
+								em
+									&:after
+										content: "\e145"
+										font-family: Material Icons
+										font-size: 24px
+										font-style: normal
+										font-weight: 700
+
 							.nav-sub
-								gap: 32px
+								height: 0
+								opacity: 0
+								visibility: hidden
+								gap: 16px
 								display: flex
 								flex-direction: column
-								margin-top: 16px
+								transition: 0.3s linear
 								li
 									a
 										display: flex
@@ -210,6 +222,15 @@
 										gap: 8px
 										font-size: 16px
 										color: #333333
+							&.active
+								.accordion-title
+									em
+										&:after
+											content: "\e15b"
+								.nav-sub
+									height: fit-content
+									opacity: 1
+									visibility: visible
 				.download-app
 					margin: 32px 0
 					display: flex

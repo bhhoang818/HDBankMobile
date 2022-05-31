@@ -1,6 +1,8 @@
 window.onload = () => {
     headerActive();
     initSwiper();
+    backToTop();
+    Marquee();
 }
 const headerActive = () => {
     let butonToggle = document.getElementById('butonToggle');
@@ -91,14 +93,13 @@ const initSwiper = () => {
         },
     });
     var swiper = new Swiper(".myPromotion", {
-        speed: 1750,
-        observer: true,
-        observeParents: true,
+        speed: 6000,
         autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
+            delay: 1,
         },
         loop: true,
+        allowTouchMove: false,
+        disableOnInteraction: true,
         breakpoints: {
             375: {
                 slidesPerView: 2,
@@ -123,3 +124,54 @@ const initSwiper = () => {
         },
     });
 }
+const backToTop = () => {
+    if (window.pageYOffset > 0) {
+        window.scrollBy(0, -80);
+        setTimeout(backToTop, 0);
+    }
+    var goTopBtn = document.querySelector('.footer__logo__arrow');
+    goTopBtn.addEventListener('click', backToTop);
+};
+
+function Marquee() {
+    let marquee = document.querySelectorAll('.clipped-text');
+    marquee.forEach(el => {
+        let rate = 200;
+        let distance = el.clientWidth;
+        let style = window.getComputedStyle(el);
+        let marginRight = parseInt(style.marginRight) || 0;
+        let totalDistance = distance + marginRight;
+        let time = totalDistance / rate;
+        let container = el.parentElement;
+
+        gsap.to(container, time, {
+            repeat: -1,
+            x: '-' + totalDistance,
+            ease: Linear.easeNone,
+        });
+    });
+
+}
+let question = document.querySelectorAll(".question");
+question.forEach((qsitem) => {
+    qsitem.addEventListener("click", function (e) {
+        //   store the .answer div containing the answer
+        let sibling = qsitem.nextElementSibling;
+
+        // Nested loop for removing active class from all and set answer height to 0
+        question.forEach((item) => {
+            item.nextElementSibling.style.height = "0px";
+            //   remove class "active" except for the currently clicked item
+            item != qsitem && item.parentNode.classList.remove("active");
+        });
+        //then toggle the "active" class of clicked item's parent ".qna"
+        this.parentNode.classList.toggle("active");
+
+        // set actual height for .answer div if .qna has the class "active"
+        if (qsitem.parentNode.classList.contains("active")) {
+            sibling.style.height = sibling.scrollHeight + "px";
+        } else {
+            sibling.style.height = "0px";
+        }
+    });
+});

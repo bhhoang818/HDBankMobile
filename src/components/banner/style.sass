@@ -54,35 +54,37 @@
 
     .marquee
         position: absolute
-        width: 343px
+        width: 95vw
         height: 48px
         left: 50%
-        top: 0
+        top: 24px
         transform: translateX(-50%)
+        box-sizing: border-box
         background: rgba(240, 0, 32, 0.72)
-        border: 1px solid rgba(116, 0, 0, 0.46)
         box-shadow: inset -1px -2px 1px rgba(255, 255, 255, 0.25), inset 1px 2px 1px rgba(255, 255, 255, 0.25)
         backdrop-filter: blur(30px)
         border-radius: 12px
-        color: #fff
         overflow: hidden
         z-index: 100
-
-        &-inner
+        display: flex
+        overflow: hidden
+        align-items: center
+        &-content
             display: flex
+            animation: marquee 18s linear infinite running
+        &-tag
+            width: max-content
+            margin: 0 .5em
+            display: inline-flex
             align-items: center
-            width: 200%
-            position: absolute
-            overflow: hidden
-            animation: marquee 12s linear infinite
-
+            justify-content: center
             span
-                float: left
-                width: 100%
-                white-space: nowrap
+                font-size: 18px
+                color: #fff
+                font-weight: 600
 
 @keyframes marquee
     0%
-        left: 0
+        transform: translateX(0)
     100%
-        left: -200%
+        transform: translate(-100%)

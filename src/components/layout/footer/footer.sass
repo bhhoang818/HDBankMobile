@@ -4,14 +4,16 @@ footer
 	background: linear-gradient(0deg, #F4F4F4, #F4F4F4)
 	.footer__logo__arrow
 		position: absolute
-		top: 50px
+		top: 30px
 		right: 30px
 		cursor: pointer
+		z-index: 1000
 	.infor-box
 		padding-right: 50px
 		.logo-footer
 			display: block
 			margin-bottom: 32px
+			width: 105px
 		ul
 			padding-left: 0
 			li
@@ -38,13 +40,30 @@ footer
 					font-size: r(14px)
 					line-height: 20px
 					color: #000000
+				&::after
+					content: '\e5cf'
+					font-family: Material Icons
+					font-size: 18px
+					transition: all ease-in-out .3s
 			ul
 				padding-left: 0
+				height: 0
+				opacity: 0
+				visibility: hidden
+				transition: all ease-in-out .3s
 				li
 					padding: 8px 0
 					a
 						color: #000000
 						font-size: r(14px)
+			&.active
+				.footer-infor_tile
+					&::after
+						transform: rotate(180deg)
+				ul
+					height: fit-content
+					opacity: 1
+					visibility: visible
 	.footer-coppyright
 		margin-top: 32px
 		margin-bottom: 48px
@@ -78,6 +97,10 @@ footer
 				display: block
 		.download-app
 			.qr-code
+				.icon
+					width: 128px
+					height: 128px
+					margin: 0 auto 16px
 				ul
 					padding-left: 0
 					margin-bottom: 0
@@ -121,12 +144,7 @@ footer
 					display: flex
 					align-items: center
 					justify-content: space-between
-					&::after
-						content: '\e5cf'
-						font-family: Material Icons
-						font-size: 18px
-				ul
-					display: none
+
 		.footer-coppyright
 			.coppyright
 				li
